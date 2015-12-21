@@ -1,0 +1,15 @@
+form {
+	text-align: center;
+	font: "Helvetica Neue";
+	margin-top: 250px;
+	background-color: #ADD8E6; 
+	height:3em;
+	padding: 4em; 
+	margin-left: 28em; 
+	margin-right: 28em; 
+	border-radius: 25px
+}
+
+body {
+	background-color: #000000;
+}
