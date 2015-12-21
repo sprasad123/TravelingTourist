@@ -12,6 +12,7 @@
 		<h3 style="color:#ADD8E6">Traveling Tourist<h3>
 		<form onsubmit="submit(event, $('#city')">
 			Search <input id="city" type="text" name="search">
+			<input type="submit" name="submit" value="Go">
 		</form>
 
 <!-- ALL SCRIPT INCLUDES GO HERE! (for page load efficiency) -->
@@ -22,14 +23,16 @@
 		<script src="js/parse-1.6.7.min.js"></script>
 		<script>
 			function search (e, city) {
-				for (var i=0; i < travel.length; i++) {
+				$.getJSON('index.json', function(data) {
+					for (var i=0; i < travel.length; i++) {
 					var cityName = travel.city[i];
-					if (city == cityName) {
-						for (var j=0; j < travel.city.length) {
-							travel.city[j]["location"] + "\n" + travel.city[j]["description"];
+						if (city == cityName) {
+							for (var j=0; j < travel.city.length) {
+								travel.city[j]["location"] + "\n" + travel.city[j]["description"];
+							}
 						}
 					}
-				}
+				});
 			}
 		</script>
 	</body>
