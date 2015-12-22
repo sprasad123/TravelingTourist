@@ -20,9 +20,11 @@
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<!-- Note: Bootstrap required jQuery -->
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/parse-1.6.7.min.js"></script>
+		<!--<script src="js/parse-1.6.7.min.js"></script>-->
 		<script>
 			function find (e, city) {
+				e.preventDefault();
+				console.log("hi");
 				$.getJSON('index.json', function(data) {
 					for (var i=0; i < travel.length; i++) {
 					var cityName = travel.city[i];
