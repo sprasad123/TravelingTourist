@@ -24,10 +24,10 @@
 		<script>
 			function find (e, city) {
 				e.preventDefault();
-				console.log("hi");
 				$.getJSON('index.json', function(data) {
+					console.log("hi");
 					for (var i=0; i < travel.length; i++) {
-					var cityName = travel.city[i];
+						var cityName = travel.city[i];
 						if (city == cityName) {
 							for (var j=0; j < travel.city.length; j++) {
 								travel.city[j]["location"] + "\n" + travel.city[j]["description"];
