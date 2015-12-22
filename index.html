@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<h3 style="color:#ADD8E6">Traveling Tourist<h3>
-		<form onsubmit="search(event, $('#city')[0].value)">
+		<form onsubmit="find(event, $('#city')[0].value)">
 			Search <input id="city" type="text" name="search">
 			<input type="submit" name="submit" value="Go">
 		</form>
@@ -22,7 +22,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/parse-1.6.7.min.js"></script>
 		<script>
-			function search (e, city) {
+			function find (e, city) {
 				$.getJSON('index.json', function(data) {
 					for (var i=0; i < travel.length; i++) {
 					var cityName = travel.city[i];
