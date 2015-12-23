@@ -22,12 +22,12 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!--<script src="js/parse-1.6.7.min.js"></script>-->
 		<script>
-			function find (e, cityInput) {
+			function find (e, city) {
 				e.preventDefault();
 				//$.getJSON('index.json', function(data) {
 				//json
 				var travel =
-					{"city": {
+					{"place": {
 						"San Francisco": [
 					{
 						"location": "1. Golden Gate Bridge",
@@ -72,10 +72,10 @@
 					]
 				}
 				};
-				for (var i=0; i < city.length; i++) {
-					var cityName = city;
+				for (var i=0; i < place.length; i++) {
+					var cityName = place;
 					console.log(cityName);
-					if (cityInput == cityName) {
+					if (city == cityName) {
 						for (var j=0; j < city.length; j++) {
 							travel.city[j]["location"] + "\n" + travel.city[j]["description"];
 						}
