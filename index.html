@@ -27,7 +27,7 @@
 				//$.getJSON('index.json', function(data) {
 				//json
 				var travel =
-					{"city": {
+					[{"city": {
 						"San Francisco": [
 					{
 						"location": "1. Golden Gate Bridge",
@@ -71,7 +71,8 @@
 					}	
 					]
 				}
-				};
+				}
+				];
 				for (var i=0; i < travel.length; i++) {
 					var cityName = travel.city[i];
 					console.log(travel.city[i]);
