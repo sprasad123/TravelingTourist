@@ -22,7 +22,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!--<script src="js/parse-1.6.7.min.js"></script>-->
 		<script>
-			function find (e, city) {
+			function find (e, cityInput) {
 				e.preventDefault();
 				//$.getJSON('index.json', function(data) {
 				//json
@@ -75,7 +75,7 @@
 				for (var i=0; i < city.length; i++) {
 					var cityName = city;
 					console.log(cityName);
-					if (city == cityName) {
+					if (cityInput == cityName) {
 						for (var j=0; j < city.length; j++) {
 							travel.city[j]["location"] + "\n" + travel.city[j]["description"];
 						}
