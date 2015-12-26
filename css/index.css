@@ -13,3 +13,8 @@ form {
 body {
 	background-color: #000000;
 }
+
+#results {
+	font: "Helvetica Neue";
+	font-color: #ffffff;
+}
