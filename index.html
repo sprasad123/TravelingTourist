@@ -88,7 +88,7 @@
 				for (j in travel.place[city]) {
 					document.getElementById('results').innerText += travel.place[city][j]["location"] + "\n" + travel.place[city][j]["description"];
 					var mybr = document.createElement('br');
-					someElement.appendChild(mybr);
+					document.appendChild(mybr);
 				}
 			}
 		</script>
