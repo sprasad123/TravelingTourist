@@ -94,6 +94,10 @@
 					var target = document.getElementById("results");
 					target.appendChild(p);
 					target.innerHTML += travel.place[city][j]["location"] + "\n" + travel.place[city][j]["description"] + "\n";
+					$("#radioButtonId").click(function(){
+   						var ctrl = $('<input/>').attr({ type: 'text', name:'text', value:'text'});
+   						$("#results").append(ctrl);
+					});
 				}
 			}
 		</script>
