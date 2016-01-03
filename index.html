@@ -11,9 +11,12 @@
 	<body>
 		<h3 style="color:#ADD8E6">Traveling Tourist<h3>
 		<form onsubmit="find(event, $('#city')[0].value)">
-			Search <input id="city" type="text" name="search">
-			<input type="submit" name="submit" value="Go">
+			<div id="search">
+				Search <input id="city" type="text" name="search">
+				<input type="submit" name="submit" value="Go">
+			</div>
 		</form>
+		<div id="results"> <p> </p> </div>
 
 <!-- ALL SCRIPT INCLUDES GO HERE! (for page load efficiency) -->
 		<!-- <script src="js/angular.min.js"></script> -->
@@ -86,13 +89,13 @@
 				};
 				var j=0;
 				for (j in travel.place[city]) {
-					document.getElementById('results').innerText += travel.place[city][j]["location"] + "\n" + travel.place[city][j]["description"] + "\n";
+					/* document.getElementById('results').innerText += travel.place[city][j]["location"] + "\n" + travel.place[city][j]["description"] + "\n"; */
 					//var html = document.documentElement;
 					//document.getElementById("results").appendChild(p);
-					/*var p = document.createElement("P");
+					var p = document.createElement("P");
 					var target = document.getElementById("results");
 					target.appendChild(p);
-					target.innerHTML += travel.place[city][j]["location"] + "\n" + travel.place[city][j]["description"] + "\n"; */
+					target.innerHTML += travel.place[city][j]["location"] + "\n" + travel.place[city][j]["description"] + "\n";
 				}
 			}
 		</script>
